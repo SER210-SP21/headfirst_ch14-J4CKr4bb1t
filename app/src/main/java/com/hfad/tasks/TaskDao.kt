@@ -21,7 +21,8 @@ interface TaskDao {
     @Delete
     suspend fun delete(task: Task)
 
-    //these use live data, so they do not need to be suspended. they ALREADY run in the background
+    //these use live data, so they do not need to be suspended.
+    // they ALREADY run in the background
     @Query("SELECT * FROM task_table WHERE taskId = :taskId")
     fun get(taskId: Long): LiveData<Task>
 
