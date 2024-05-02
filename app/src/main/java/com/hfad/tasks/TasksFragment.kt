@@ -28,6 +28,8 @@ class TasksFragment : Fragment() {
 
         binding.viewModel = viewModel
 
+        binding.lifecycleOwner = viewLifecycleOwner
+
         return view
     }
 
